@@ -1,0 +1,129 @@
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+    --ff1: 'Big Shoulders Display', cursive;
+    --ff2: 'Lexend Deca', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-height: 1200px;
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.sedans-svg {
+    content: url('../images/icon-sedans.svg');
+    margin: 3rem;
+
+}
+
+
+.sedans {
+    background-color: var(--bright-orange);
+    border-radius: 1rem 1rem 0 0;
+
+}
+
+.suvs-svg {
+    content: url('../images/icon-suvs.svg');
+    margin: 3rem;
+}
+
+.suvs {
+    background-color: var(--dark-cyan);
+}
+
+.luxury-svg {
+    content: url('../images/icon-luxury.svg');
+    margin: 3rem;
+}
+
+.luxury {
+    background-color: var(--very-dark-cyan);
+    border-radius: 0 0 1rem 1rem;
+}
+
+.title {
+    text-transform: uppercase;
+    color: var(--very-light-gray);
+    font-family: var(--ff1);
+    margin: 3rem;
+    font-size: 3rem;
+}
+
+.par {
+    color: var(--transparent-white);
+    font-family: var(--ff2);
+    margin: 3rem;
+    line-height: 2;
+    font-size: 1.2rem;
+}
+
+.cta {
+    display: grid;
+    background-color: white;
+    font-family: var(--ff2);
+    margin: 3rem;
+    height: 4rem;
+    width: 48%;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 3.2;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.sedans__cta {
+    color: var(--bright-orange);
+    text-decoration: none;
+}
+
+.suvs__cta {
+    color: var(--dark-cyan);
+    text-decoration: none;
+}
+
+.luxury__cta {
+    color: var(--very-dark-cyan);
+    text-decoration: none;
+}
+
+@media (orientation: landscape) {
+
+    .main {
+        display: flex;
+        flex-direction: row;
+        min-width: 800px;
+        min-height: 400px;
+
+    }
+
+    .sedans {
+        border-radius: 1rem 0 0 1rem;
+    }
+
+    .luxury {
+        border-radius: 0 1rem 1rem 0;
+    }
+
+    .cta {
+        margin-top: 7rem;
+    }
+}
